@@ -1,0 +1,28 @@
+esphome:
+  name: mydevice
+  platform: ESP32
+  board: esp32dev
+
+wifi:
+  ssid: "LAPTOPWIFI"
+  password: "73556088"
+
+logger:
+
+api:
+
+ota:
+
+i2c:
+  sda: 35
+  scl: 34
+  scan: true
+
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "SHT3x Temperature"
+    humidity:
+      name: "SHT3x Humidity"
+    address: 0x44
+    update_interval: 60s

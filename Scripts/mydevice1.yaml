@@ -1,0 +1,49 @@
+esphome:
+  name: envsensor2
+
+esp32:
+  board: lolin_s2_mini
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "1"
+
+ota:
+  - platform: esphome
+    password: "1"
+
+wifi:
+  ssid: "IoT"
+  password: "InternetOfThings"
+
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+ # ap:
+  #  ssid: "LAPTOPWIFI"
+   # password: "12345678"
+
+ # manual_ip:
+   # static_ip: 192.168.3.140
+   # gateway: 192.168.3.1
+    #subnet: 255.255.255.0
+
+captive_portal:
+    
+i2c:
+  sda: 33
+  scl: 35
+  scan: true
+
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "SHT3x Temperature"
+    humidity:
+      name: "SHT3x Humidity"
+    address: 0x44
+    update_interval: 10s
