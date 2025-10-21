@@ -9,11 +9,10 @@
    [ESPHome Command Line Setup](https://esphome.io/guides/installing_esphome/)
 
 2. **Flash the device using your YAML**  
-   ```bash
+
    esphome run .\device10.yaml
-```
+
 
 3. **Testing**
-	```bash
+
    esphome logs .\device10.yaml
-```
