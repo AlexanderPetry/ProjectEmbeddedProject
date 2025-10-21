@@ -1,6 +1,11 @@
 esphome:
   name: ${devicename}
   friendly_name: ${devicename}
+  on_boot:
+    priority: -10
+    then:
+      - delay: 15s  # give Wi-Fi and sensor time to initialize before sleep
+      - deep_sleep.enter: deep_sleep_ctrl
 
 esp32:
   board: lolin_s2_mini
@@ -19,6 +24,7 @@ ota:
 wifi:
   ssid: "IoT"
   password: "InternetOfThings"
+  fast_connect: true   # speeds up reconnects for fixed Wi-Fi
 
 captive_portal:
 
@@ -30,12 +36,12 @@ i2c:
 sensor:
   - platform: sht3xd
     temperature:
-      name: "SHT3x Temperature"
+      name: "${devicename} Temperature"
     humidity:
-      name: "SHT3x Humidity"
+      name: "${devicename} Humidity"
     address: 0x44
-    update_interval: 10s  
+    update_interval: 10s
 
 deep_sleep:
-  run_duration: 30s
-  sleep_duration: 10s
+  id: deep_sleep_ctrl
+  sleep_duration: 1min
