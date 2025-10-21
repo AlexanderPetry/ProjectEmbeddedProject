@@ -4,7 +4,7 @@ esphome:
   on_boot:
     priority: -10
     then:
-      - delay: 15s  # give Wi-Fi and sensor time to initialize before sleep
+      - delay: 15s 
       - deep_sleep.enter: deep_sleep_ctrl
 
 esp32:
@@ -24,7 +24,7 @@ ota:
 wifi:
   ssid: "IoT"
   password: "InternetOfThings"
-  fast_connect: true   # speeds up reconnects for fixed Wi-Fi
+  fast_connect: true   
 
 captive_portal:
 
