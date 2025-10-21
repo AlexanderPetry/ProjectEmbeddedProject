@@ -1,8 +1,8 @@
-# Vleermuis detectie
+# ESPHome YAML Installation Guide
 
-Must:
-Hardware
-documentatie aplicaiton note
-documentatie github repo
-code revisie github
+1. **Install ESPHome CLI**  
+   Follow the official guide: [ESPHome Command Line Setup](https://esphome.io/guides/getting_started_command_line/)
 
+2. **Flash the device**  
+   ```bash
+   esphome run .\device34.yaml
