@@ -1,7 +1,7 @@
 # ESPHome YAML Installation Guide
 
 1. **Install ESPHome CLI**  
-   Follow the official guide: [ESPHome Command Line Setup](https://esphome.io/guides/getting_started_command_line/)
+   Follow the official guide: [ESPHome Command Line Setup](https://esphome.io/guides/installing_esphome/)
 
 2. **Flash the device**  
    ```bash
