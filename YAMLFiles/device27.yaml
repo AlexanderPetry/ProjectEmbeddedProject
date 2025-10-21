@@ -1,0 +1,4 @@
+substitutions:
+  devicename: envsensor27
+
+<<: !include base.yaml
