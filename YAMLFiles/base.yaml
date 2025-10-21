@@ -1,15 +1,14 @@
 esphome:
-  name: envsensor2
+  name: ${devicename}
+  friendly_name: ${devicename}
 
 esp32:
   board: lolin_s2_mini
   framework:
     type: arduino
 
-# Enable logging
 logger:
 
-# Enable Home Assistant API
 api:
   password: "1"
 
@@ -21,19 +20,8 @@ wifi:
   ssid: "IoT"
   password: "InternetOfThings"
 
-
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
- # ap:
-  #  ssid: "LAPTOPWIFI"
-   # password: "12345678"
-
- # manual_ip:
-   # static_ip: 192.168.3.140
-   # gateway: 192.168.3.1
-    #subnet: 255.255.255.0
-
 captive_portal:
-    
+
 i2c:
   sda: 33
   scl: 35
@@ -46,4 +34,8 @@ sensor:
     humidity:
       name: "SHT3x Humidity"
     address: 0x44
-    update_interval: 10s
+    update_interval: 300s  
+
+#deep_sleep:
+#  run_duration: 20s
+#  sleep_duration: 5min

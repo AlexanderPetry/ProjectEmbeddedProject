@@ -1,0 +1,4 @@
+substitutions:
+  devicename: nvsensor34
+
+<<: !include base.yaml
