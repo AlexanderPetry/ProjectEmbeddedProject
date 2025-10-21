@@ -22,8 +22,8 @@ ota:
     password: "1"
 
 wifi:
-  ssid: "batSenseWifi"
-  password: "batSenseWifi123-_-"
+  ssid: 
+  password: 
   fast_connect: true   
 
 captive_portal:
