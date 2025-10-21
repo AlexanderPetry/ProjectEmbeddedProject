@@ -22,8 +22,8 @@ ota:
     password: "1"
 
 wifi:
-  ssid: 
-  password: 
+  ssid:
+  password:
   fast_connect: true   
 
 captive_portal:

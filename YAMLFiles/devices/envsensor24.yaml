@@ -1,4 +1,0 @@
-substitutions:
-  devicename: envsensor24
-
-<<: !include base.yaml
