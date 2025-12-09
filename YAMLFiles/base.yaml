@@ -22,8 +22,8 @@ ota:
     password: "1"
 
 wifi:
-  ssid:
-  password:
+  ssid: "batSenseWifi"
+  password: "batSenseWifi123-_-"
   fast_connect: true   
 
 captive_portal:
@@ -44,4 +44,4 @@ sensor:
 
 deep_sleep:
   id: deep_sleep_ctrl
-  sleep_duration: 1min
+  sleep_duration: 5min
